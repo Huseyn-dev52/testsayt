@@ -34,6 +34,7 @@
     <p>AŞAĞIDAKINA BAS.</p>
 
     <button onclick="sekilGoster()">BURA BAS GİJDİLLAQ</button>
+<div id="saat"></div>
 <img id="sekil" src="IMG_20260712_142323.jpg" width="300" style="display:none;">
 
     <script>
@@ -41,6 +42,12 @@
 
 document.getElementById("sekil").style.display = "block";
 }
+        function saatGoster( ){ 
+            let indi = new Date();
+      document.getElementById("saat").innerHTML = indi.toLocaleTimeString();
+        }
+        setInterval(saatGoster, 1000);
+saatGoster();
     </script>
 
 </body>
